@@ -1,4 +1,4 @@
-package ch06;
+
 
 // 함수를 사용하기 위한 클래스 (보통 함수 만들 때 클래스를 만들고 사용)
 class CalcUtil{

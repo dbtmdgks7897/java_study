@@ -1,4 +1,4 @@
-// package ch06;
+
 
 // // 고양이를 추상화
 // class Cat {

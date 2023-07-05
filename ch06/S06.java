@@ -1,4 +1,4 @@
-// package ch06;
+
 
 // class 아이템{
 //     String name;
