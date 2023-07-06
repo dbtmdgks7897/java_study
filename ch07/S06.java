@@ -37,7 +37,7 @@ public class S06 {
         // final 값은 변경 불가능
         // S06.third = 33;
 
-        final String str = "홍길동";
+        // final String str = "홍길동";
         // 변경 불가능
         // str = "임꺽정";
     }

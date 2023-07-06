@@ -1,4 +1,4 @@
-import Cat;
+package ch06;
 
 class Cat{
     String name;

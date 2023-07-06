@@ -1,3 +1,4 @@
+package ch00;
 public class Study04 {
     // 함수 - 반복적으로 사용하는 로직들을 하나로 모음
     // 함수명 printAdd, 소괄호 안의 데이터는 외부에서 받아옴

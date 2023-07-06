@@ -1,4 +1,4 @@
-
+package ch06;
 
 class Temp{
     public static int myFunction(int b){

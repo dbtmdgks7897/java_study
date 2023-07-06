@@ -1,3 +1,4 @@
+package ch00;
 public class Study02 {
     // 한 프로그램 내에 main 함수는 하나만
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package test;
+package ch00;
 
 public class Solution {
     public int[] solution(String[] strlist) {
