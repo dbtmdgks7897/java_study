@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -21,7 +22,14 @@ public class App {
         // 데이터 저장
         // DBClass.saveDB(dto);
         // 데이터 조회
-        DBClass.selectDB();
+        List<NaverDTO> resultDto = DBClass.selectDB();
+        for(NaverDTO item : resultDto){
+            System.out.println("아이디 : " + item.getUserId());
+            System.out.println("비밀번호 : " + item.getUserPw());
+            System.out.println("이름 : " + item.getUserName());
+            System.out.println("이메일 : " + item.getEmail());
+            System.out.println();
+        }
         // 데이터 수정
         // 데이터 삭제
     }

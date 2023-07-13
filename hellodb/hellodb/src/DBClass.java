@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -63,10 +65,10 @@ public class DBClass {
 		}
 	}
 
-	public static void selectDB() {
+	public static List<NaverDTO> selectDB() {
 		PreparedStatement pstmt = null;
     	ResultSet rs = null;
-
+		List<NaverDTO> list = new ArrayList<>();
 		try {
 			// Select 쿼리문
 			String sql = "SELECT * FROM naver";
@@ -77,16 +79,17 @@ public class DBClass {
 
 			// 결과값 출력
 			while (rs.next()) {
+				NaverDTO dto = new NaverDTO();
 				String userid = rs.getString("userid");
 				String userpw = rs.getString("userpw");
 				String name = rs.getString("name");
 				String email = rs.getString("email");
 
-				System.out.println("아이디 : " + userid);
-				System.out.println("비밀번호 : " + userpw);
-				System.out.println("이름 : " + name);
-				System.out.println("이메일 : " + email);
-				System.out.println();
+				dto.setUserId(userid);
+				dto.setUserPw(userpw);
+				dto.setUserName(name);
+				dto.setEmail(email);
+				list.add(dto);
 			}
 		} catch (SQLException e) {
 			System.out.println("Database 연결중 에러가 발생 했습니다.");
@@ -100,5 +103,6 @@ public class DBClass {
 				e.printStackTrace();
 			}
 		}
+		return list;
 	}
 }
